@@ -21,6 +21,7 @@
 
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=kbudizbb7n"></script>
 </head>
 <body>
 
@@ -191,6 +192,9 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
           주소 복사
         </button>
+        <div class="location__map animate-item" data-animate="scale-in">
+          <div id="map" style="width:100%; max-width:600px; height:400px; border:1px solid #ccc;"></div>
+        </div>
         <div class="location__links animate-item" data-animate="fade-up">
           <a class="btn btn--kakao" id="kakaoMapBtn" href="#" target="_blank" rel="noopener">카카오맵</a>
           <a class="btn btn--naver" id="naverMapBtn" href="#" target="_blank" rel="noopener">네이버지도</a>
