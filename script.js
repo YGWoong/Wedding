@@ -687,6 +687,27 @@
         $('#copyAddressBtn').addEventListener('click', () => {
             copyToClipboard(w.address, '주소가 복사되었습니다');
         });
+
+        // 3. 원하는 장소의 위도, 경도 좌표 설정
+        var companyLocation = new naver.maps.LatLng(37.5041206, 126.7566332);
+
+        // 4. 지도 생성 및 옵션 설정
+        var mapOptions = {
+            center: companyLocation, // 지도의 중심 좌표
+            zoom: 16,               // 지도의 초기 줌 레벨 (1~21)
+            zoomControl: true,      // 줌 컨트롤러 표시 여부
+            zoomControlOptions: {
+                position: naver.maps.Position.TOP_RIGHT
+            }
+        };
+
+        var map = new naver.maps.Map('map', mapOptions);
+
+        // 5. 약도 자리에 빨간색 마커(핀) 꽂기
+        var marker = new naver.maps.Marker({
+            position: companyLocation,
+            map: map
+        });
     }
 
     /* ═══════════════════════════════════════════
