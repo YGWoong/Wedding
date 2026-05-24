@@ -39,7 +39,7 @@ const CONFIG = {
     date: "2026-09-12",
     time: "16:30",
     venue: "소풍컨벤션웨딩",
-    hall: "베일리홀 7층",
+    hall: "7층 베일리홀",
     address: "경기 부천시 원미구 송내대로 239",
     tel: "032-624-7777",
     mapLinks: {
