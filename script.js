@@ -861,6 +861,11 @@
         init();
     }
 
+    // 두 손가락으로 줌인/줌아웃하는 제스처 막기
+    document.addEventListener('gesturestart', function (e) {
+      e.preventDefault();
+    });
+
     document.addEventListener('touchmove', function (event) {
         if (event.scale !== undefined && event.scale !== 1) {
             event.preventDefault();
