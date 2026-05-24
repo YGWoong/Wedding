@@ -588,12 +588,12 @@
         modalIndex = index;
         showModalImage();
         $('#photoModal').classList.add('is-open');
-        document.body.classList.add('no-scroll');
+        // document.body.classList.add('no-scroll');
     }
 
     function closePhotoModal() {
         $('#photoModal').classList.remove('is-open');
-        document.body.classList.remove('no-scroll');
+        // document.body.classList.remove('no-scroll');
     }
 
     function showModalImage() {
