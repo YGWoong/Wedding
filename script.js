@@ -520,32 +520,6 @@
     }
 
     /* ═══════════════════════════════════════════
-    Story Section
-    ═══════════════════════════════════════════ */
-
-    // function initStory(storyImages) {
-    //     $('#storyTitle').textContent = CONFIG.story.title;
-    //     $('#storyContent').textContent = CONFIG.story.content;
-
-    //     const container = $('#storyPhotos');
-    //     const placeholder = container.querySelector('.loading-placeholder');
-    //     if (placeholder)
-    //         placeholder.remove();
-
-    //     if (storyImages.length === 0)
-    //         return;
-
-    //     storyImages.forEach((src, i) => {
-    //         const div = document.createElement('div');
-    //         div.className = 'story__photo-item animate-item';
-    //         div.setAttribute('data-animate', 'fade-up');
-    //         div.innerHTML = `<img src="${src}" alt="스토리 사진 ${i + 1}" loading="lazy">`;
-    //         div.addEventListener('click', () => openPhotoModal(storyImages, i));
-    //         container.appendChild(div);
-    //     });
-    // }
-
-    /* ═══════════════════════════════════════════
     Gallery Section
     ═══════════════════════════════════════════ */
 
@@ -785,13 +759,10 @@
     ═══════════════════════════════════════════ */
 
     function showLoadingPlaceholders() {
-        const storyPhotos = $('#storyPhotos');
         const galleryGrid = $('#galleryGrid');
 
         const placeholderHTML = '<div class="loading-placeholder"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
 
-        if (storyPhotos)
-            storyPhotos.innerHTML = placeholderHTML;
         if (galleryGrid)
             galleryGrid.innerHTML = placeholderHTML;
     }
@@ -861,21 +832,13 @@
         initFooter();
         initScrollAnimations();
 
-        // Set story text immediately (photos load async)
-        // $('#storyTitle').textContent = CONFIG.story.title;
-        // $('#storyContent').textContent = CONFIG.story.content;
 
-        // Auto-detect story and gallery images in parallel
-        // const [storyImages, galleryImages] = await Promise.all([
-        //             loadImagesFromFolder('story'),
-        //             loadImagesFromFolder('gallery')
-        //         ]);
+        // Auto-detect gallery images in parallel
         const [galleryImages] = await Promise.all([
                     loadImagesFromFolder('gallery')
                 ]);
 
         // Render sections with discovered images
-        // initStory(storyImages);
         initGallery(galleryImages);
     }
 
