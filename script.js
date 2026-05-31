@@ -416,11 +416,15 @@
 
         const parentsHTML = `
       <div class="parent-row">
-        ${parentLine(g.father, g.mother, g.fatherDeceased, g.motherDeceased)}
+        <div class="parent-name">
+          ${parentLine(g.father, g.mother, g.fatherDeceased, g.motherDeceased)}
+        </div>
         아들 <span class="child-name">${g.name}</span>
       </div>
       <div class="parent-row">
-        ${parentLine(b.father, b.mother, b.fatherDeceased, b.motherDeceased)}
+        <div class="parent-name">
+          ${parentLine(b.father, b.mother, b.fatherDeceased, b.motherDeceased)}
+        </div>
         딸 <span class="child-name">${b.name}</span>
       </div>
     `;

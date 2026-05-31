@@ -614,9 +614,16 @@ input, textarea, select {
   gap: 0.5rem;
 }
 
+.greeting__parents .parent-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
 .greeting__parents .parent-dot {
   color: var(--color-sage);
-  font-size: 0.5rem;
+  font-size: 0.3rem;
 }
 
 .greeting__parents .child-name {
