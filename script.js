@@ -535,8 +535,9 @@
             div.setAttribute('data-animate', 'scale-in');
             div.innerHTML = `
                 <picture>
-                    <source srcset="${src.webp}" type="image/webp">
-                    <img src="${src.img}" alt="갤러리 사진 ${i + 1}" loading="lazy">
+                    <!--<source srcset="${src.webp}" type="image/webp">
+                    <img src="${src.img}" alt="갤러리 사진 ${i + 1}" loading="lazy">-->
+                    <img src="${src.webp}" alt="갤러리 사진 ${i + 1}" loading="lazy">
                 </picture>`;
             div.addEventListener('click', () => openPhotoModal(galleryImages, i));
             grid.appendChild(div);
@@ -566,21 +567,22 @@
 
     function closePhotoModal() {
         $('#photoModal').classList.remove('is-open');
-        const webp = $('#modalWebp');
+        // const webp = $('#modalWebp');
         const img = $('#modalImg');
-        webp.srcset = '';
+        // webp.srcset = '';
         img.src = '';
         document.body.classList.remove('no-scroll');
     }
 
     function showModalImage() {
-        const webp = $('#modalWebp');
+        // const webp = $('#modalWebp');
         const img = $('#modalImg');
-        webp.srcset = '';
+        // webp.srcset = '';
         img.src = '';
         setTimeout(() => {
-            webp.srcset = modalImages[modalIndex].webp;
-            img.src = modalImages[modalIndex].img;
+            // webp.srcset = modalImages[modalIndex].webp;
+            // img.src = modalImages[modalIndex].img;
+            img.src = modalImages[modalIndex].webp;
             $('#modalCounter').textContent = `${modalIndex + 1} / ${modalImages.length}`;
 
             $('#modalPrev').style.display = modalIndex > 0 ? '' : 'none';

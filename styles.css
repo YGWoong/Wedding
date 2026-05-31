@@ -303,6 +303,11 @@ input, textarea, select {
   visibility: visible;
 }
 
+.photo-modal:not(.is-open) {
+  display: none;
+  content-visibility: hidden;
+}
+
 .photo-modal__close {
   position: absolute;
   top: calc(1rem + var(--safe-top));
@@ -368,6 +373,10 @@ input, textarea, select {
   max-height: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
+}
+
+.photo-modal__img source, .photo-modal__img img {
+  will-change: auto;
 }
 
 .photo-modal__counter {
