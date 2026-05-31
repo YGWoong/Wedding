@@ -572,9 +572,13 @@
 
     function showModalImage() {
         // const webp = $('#modalWebp');
-        // const img = $('#modalImg');
+        const img = $('#modalImg');
         // webp.srcset = '';
-        // img.src = '';
+        img.src = '';
+        img.style.backgroundImage = 'none';
+
+        showLoadingModal();
+
         setTimeout(() => {
             // webp.srcset = modalImages[modalIndex].webp;
             // img.src = modalImages[modalIndex].img;
@@ -591,7 +595,7 @@
 
             modalDiv.innerHTML = `
                 <picture>
-                    <img src="${imgPath}" alt="모달 사진" loading="lazy">
+                    <img id="modalImg" src="${imgPath}" alt="모달 사진" loading="lazy">
                 </picture>`;
         }, 100);
     }
@@ -611,12 +615,10 @@
         });
         $('#modalPrev').addEventListener('click', (e) => {
             e.preventDefault();
-            showLoadingModal();
             modalNavigate(-1);
         });
         $('#modalNext').addEventListener('click', (e) => {
             e.preventDefault();
-            showLoadingModal();
             modalNavigate(1);
         });
 
