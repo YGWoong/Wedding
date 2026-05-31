@@ -567,27 +567,33 @@
 
     function closePhotoModal() {
         $('#photoModal').classList.remove('is-open');
-        // const webp = $('#modalWebp');
-        const img = $('#modalImg');
-        // webp.srcset = '';
-        img.src = '';
         document.body.classList.remove('no-scroll');
     }
 
     function showModalImage() {
         // const webp = $('#modalWebp');
-        const img = $('#modalImg');
+        // const img = $('#modalImg');
         // webp.srcset = '';
-        img.src = '';
+        // img.src = '';
         setTimeout(() => {
             // webp.srcset = modalImages[modalIndex].webp;
             // img.src = modalImages[modalIndex].img;
-            img.src = modalImages[modalIndex].webp;
+            const imgPath = modalImages[modalIndex].webp;
             $('#modalCounter').textContent = `${modalIndex + 1} / ${modalImages.length}`;
 
             $('#modalPrev').style.display = modalIndex > 0 ? '' : 'none';
             $('#modalNext').style.display = modalIndex < modalImages.length - 1 ? '' : 'none';
-        }, 0);
+
+            const modalDiv = $('#modalContainer');
+            const placeholder = modalDiv.querySelector('.loading-placeholder');
+            if (placeholder)
+                placeholder.remove();
+
+            modalDiv.innerHTML = `
+                <picture>
+                    <img src="${imgPath}" alt="모달 사진" loading="lazy">
+                </picture>`;
+        }, 100);
     }
 
     function modalNavigate(dir) {
@@ -605,10 +611,12 @@
         });
         $('#modalPrev').addEventListener('click', (e) => {
             e.preventDefault();
+            showLoadingModal();
             modalNavigate(-1);
         });
         $('#modalNext').addEventListener('click', (e) => {
             e.preventDefault();
+            showLoadingModal();
             modalNavigate(1);
         });
 
@@ -785,6 +793,14 @@
 
         if (galleryGrid)
             galleryGrid.innerHTML = placeholderHTML;
+    }
+    function showLoadingModal() {
+        const modalDiv = $('#modalContainer');
+
+        const placeholderHTML = '<div class="loading-placeholder"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
+
+        if (modalDiv)
+            modalDiv.innerHTML = placeholderHTML;
     }
 
     /* ═══════════════════════════════════════════
