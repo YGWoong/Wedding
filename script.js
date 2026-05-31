@@ -566,18 +566,26 @@
 
     function closePhotoModal() {
         $('#photoModal').classList.remove('is-open');
+        const webp = $('#modalWebp');
+        const img = $('#modalImg');
+        webp.srcset = '';
+        img.src = '';
         document.body.classList.remove('no-scroll');
     }
 
     function showModalImage() {
         const webp = $('#modalWebp');
-        webp.srcset = modalImages[modalIndex].webp;
         const img = $('#modalImg');
-        img.src = modalImages[modalIndex].img;
-        $('#modalCounter').textContent = `${modalIndex + 1} / ${modalImages.length}`;
+        webp.srcset = '';
+        img.src = '';
+        setTimeout(() => {
+            webp.srcset = modalImages[modalIndex].webp;
+            img.src = modalImages[modalIndex].img;
+            $('#modalCounter').textContent = `${modalIndex + 1} / ${modalImages.length}`;
 
-        $('#modalPrev').style.display = modalIndex > 0 ? '' : 'none';
-        $('#modalNext').style.display = modalIndex < modalImages.length - 1 ? '' : 'none';
+            $('#modalPrev').style.display = modalIndex > 0 ? '' : 'none';
+            $('#modalNext').style.display = modalIndex < modalImages.length - 1 ? '' : 'none';
+        }, 0);
     }
 
     function modalNavigate(dir) {
