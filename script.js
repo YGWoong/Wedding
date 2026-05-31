@@ -541,6 +541,8 @@
             div.addEventListener('click', () => openPhotoModal(galleryImages, i));
             grid.appendChild(div);
         });
+
+        modalImages = galleryImages;
     }
 
     /* ═══════════════════════════════════════════
@@ -555,19 +557,21 @@
     let touchEndY = 0;
 
     function openPhotoModal(images, index) {
-        modalImages = images;
+        // modalImages = images;
         modalIndex = index;
         showModalImage();
         $('#photoModal').classList.add('is-open');
-        // document.body.classList.add('no-scroll');
+        document.body.classList.add('no-scroll');
     }
 
     function closePhotoModal() {
         $('#photoModal').classList.remove('is-open');
-        // document.body.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');
     }
 
     function showModalImage() {
+        const webp = $('#modalWebp');
+        webp.srcset = modalImages[modalIndex].webp;
         const img = $('#modalImg');
         img.src = modalImages[modalIndex].img;
         $('#modalCounter').textContent = `${modalIndex + 1} / ${modalImages.length}`;
