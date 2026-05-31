@@ -523,27 +523,27 @@
     Story Section
     ═══════════════════════════════════════════ */
 
-    function initStory(storyImages) {
-        $('#storyTitle').textContent = CONFIG.story.title;
-        $('#storyContent').textContent = CONFIG.story.content;
+    // function initStory(storyImages) {
+    //     $('#storyTitle').textContent = CONFIG.story.title;
+    //     $('#storyContent').textContent = CONFIG.story.content;
 
-        const container = $('#storyPhotos');
-        const placeholder = container.querySelector('.loading-placeholder');
-        if (placeholder)
-            placeholder.remove();
+    //     const container = $('#storyPhotos');
+    //     const placeholder = container.querySelector('.loading-placeholder');
+    //     if (placeholder)
+    //         placeholder.remove();
 
-        if (storyImages.length === 0)
-            return;
+    //     if (storyImages.length === 0)
+    //         return;
 
-        storyImages.forEach((src, i) => {
-            const div = document.createElement('div');
-            div.className = 'story__photo-item animate-item';
-            div.setAttribute('data-animate', 'fade-up');
-            div.innerHTML = `<img src="${src}" alt="스토리 사진 ${i + 1}" loading="lazy">`;
-            div.addEventListener('click', () => openPhotoModal(storyImages, i));
-            container.appendChild(div);
-        });
-    }
+    //     storyImages.forEach((src, i) => {
+    //         const div = document.createElement('div');
+    //         div.className = 'story__photo-item animate-item';
+    //         div.setAttribute('data-animate', 'fade-up');
+    //         div.innerHTML = `<img src="${src}" alt="스토리 사진 ${i + 1}" loading="lazy">`;
+    //         div.addEventListener('click', () => openPhotoModal(storyImages, i));
+    //         container.appendChild(div);
+    //     });
+    // }
 
     /* ═══════════════════════════════════════════
     Gallery Section
@@ -862,17 +862,20 @@
         initScrollAnimations();
 
         // Set story text immediately (photos load async)
-        $('#storyTitle').textContent = CONFIG.story.title;
-        $('#storyContent').textContent = CONFIG.story.content;
+        // $('#storyTitle').textContent = CONFIG.story.title;
+        // $('#storyContent').textContent = CONFIG.story.content;
 
         // Auto-detect story and gallery images in parallel
-        const [storyImages, galleryImages] = await Promise.all([
-                    loadImagesFromFolder('story'),
+        // const [storyImages, galleryImages] = await Promise.all([
+        //             loadImagesFromFolder('story'),
+        //             loadImagesFromFolder('gallery')
+        //         ]);
+        const [galleryImages] = await Promise.all([
                     loadImagesFromFolder('gallery')
                 ]);
 
         // Render sections with discovered images
-        initStory(storyImages);
+        // initStory(storyImages);
         initGallery(galleryImages);
     }
 
