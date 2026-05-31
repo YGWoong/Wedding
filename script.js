@@ -599,9 +599,18 @@
     }
 
     function initPhotoModal() {
-        $('#modalClose').addEventListener('click', closePhotoModal);
-        $('#modalPrev').addEventListener('click', () => modalNavigate(-1));
-        $('#modalNext').addEventListener('click', () => modalNavigate(1));
+        $('#modalClose').addEventListener('click', (e) => {
+            e.preventDefault();
+            closePhotoModal();
+        });
+        $('#modalPrev').addEventListener('click', (e) => {
+            e.preventDefault();
+            modalNavigate(-1);
+        });
+        $('#modalNext').addEventListener('click', (e) => {
+            e.preventDefault();
+            modalNavigate(1);
+        });
 
         const modal = $('#photoModal');
         modal.addEventListener('click', (e) => {
