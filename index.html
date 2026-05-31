@@ -27,7 +27,7 @@
 
   <audio id="myBgm" src="audio/nothing.mp3" loop autoplay muted></audio>
   
-  <button id="toggleBtn">⏸️ 음악 정지</button>
+  <button type="button" id="toggleBtn">⏸️ 음악 정지</button>
 
   <!-- ═══ Curtain Opening Animation ═══ -->
   <div id="curtain" class="curtain">
@@ -39,7 +39,7 @@
       </div>
       <p class="curtain__subtitle">Wedding Invitation</p>
       <p class="curtain__names" id="curtainNames"></p>
-      <button class="curtain__btn" id="curtainBtn">
+      <button type="button" class="curtain__btn" id="curtainBtn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12c0 3 2.5 6.5 10 10 7.5-3.5 10-7 10-10 0-5.5-4.5-10-10-10z"/><path d="M12 2v20"/></svg>
         초대장 열기
       </button>
@@ -54,9 +54,9 @@
 
   <!-- ═══ Photo Viewer Modal ═══ -->
   <div id="photoModal" class="photo-modal" role="dialog" aria-modal="true" aria-label="사진 보기">
-    <button class="photo-modal__close" id="modalClose" aria-label="닫기">&times;</button>
-    <button class="photo-modal__nav photo-modal__nav--prev" id="modalPrev" aria-label="이전 사진">&#8249;</button>
-    <button class="photo-modal__nav photo-modal__nav--next" id="modalNext" aria-label="다음 사진">&#8250;</button>
+    <button type="button" class="photo-modal__close" id="modalClose" aria-label="닫기">&times;</button>
+    <button type="button" class="photo-modal__nav photo-modal__nav--prev" id="modalPrev" aria-label="이전 사진">&#8249;</button>
+    <button type="button" class="photo-modal__nav photo-modal__nav--next" id="modalNext" aria-label="다음 사진">&#8250;</button>
     <div class="photo-modal__container" id="modalContainer">
       <picture class="photo-modal__img">
 <!--        <source id="modalWebp" srcset="" type="image/webp">-->
@@ -172,7 +172,7 @@
           <p class="location__address" id="locationAddress"></p>
           <p class="location__tel" id="locationTel"></p>
         </div>
-        <button class="btn btn--text location__copy animate-item" data-animate="fade-up" id="copyAddressBtn">
+        <button type="button" class="btn btn--text location__copy animate-item" data-animate="fade-up" id="copyAddressBtn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
           주소 복사
         </button>
@@ -192,7 +192,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
               Google 캘린더
             </a>
-            <button class="btn btn--outline" id="icsDownloadBtn">
+            <button type="button" class="btn btn--outline" id="icsDownloadBtn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16l2 2 2-2"/></svg>
               Apple 캘린더
             </button>
@@ -223,7 +223,7 @@
 
         <!-- Groom Accounts -->
         <div class="accordion animate-item" data-animate="fade-up">
-          <button class="accordion__trigger" id="groomAccordion" aria-expanded="false">
+          <button type="button" class="accordion__trigger" id="groomAccordion" aria-expanded="false">
             <span class="accordion__icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12c0 3 2.5 6.5 10 10 7.5-3.5 10-7 10-10 0-5.5-4.5-10-10-10z"/><path d="M12 2v20"/></svg>
             </span>
@@ -237,7 +237,7 @@
 
         <!-- Bride Accounts -->
         <div class="accordion animate-item" data-animate="fade-up">
-          <button class="accordion__trigger" id="brideAccordion" aria-expanded="false">
+          <button type="button" class="accordion__trigger" id="brideAccordion" aria-expanded="false">
             <span class="accordion__icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12c0 3 2.5 6.5 10 10 7.5-3.5 10-7 10-10 0-5.5-4.5-10-10-10z"/><path d="M12 2v20"/></svg>
             </span>
