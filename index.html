@@ -58,10 +58,11 @@
     <button type="button" class="photo-modal__nav photo-modal__nav--prev" id="modalPrev" aria-label="이전 사진">&#8249;</button>
     <button type="button" class="photo-modal__nav photo-modal__nav--next" id="modalNext" aria-label="다음 사진">&#8250;</button>
     <div class="photo-modal__container" id="modalContainer">
-      <picture class="photo-modal__img">
+<!--      <picture class="photo-modal__img">-->
 <!--        <source id="modalWebp" srcset="" type="image/webp">-->
-        <img id="modalImg" src="" alt="사진" draggable="false">
-      </picture>
+<!--        <img id="modalImg" src="" alt="사진" draggable="false">-->
+<!--      </picture>-->
+      <div id="modalImg" class="photo-modal__img" draggable="false" style="width: 100%; aspect-ratio: 2 / 3; background-size: cover; background-position: center;"></div>
     </div>
     <div class="photo-modal__counter" id="modalCounter"></div>
   </div>
