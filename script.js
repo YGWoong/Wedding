@@ -36,34 +36,25 @@
     Image Auto-Detection
     ═══════════════════════════════════════════ */
 
-    function loadImagesFromFolder(folder, maxAttempts = 50) {
+    function loadImagesFromFolder(folder) {
         return new Promise(resolve => {
             const images = [];
-            let current = 1;
-            let consecutiveFails = 0;
 
-            function tryNext() {
-                if (current > maxAttempts || consecutiveFails >= 3) {
-                    resolve(images);
-                    return;
-                }
-                const img = new Image();
-                const path = `images/${folder}/${current}.jpg`;
-                img.onload = function () {
-                    images.push(path);
-                    consecutiveFails = 0;
-                    current++;
-                    tryNext();
-                };
-                img.onerror = function () {
-                    consecutiveFails++;
-                    current++;
-                    tryNext();
-                };
-                img.src = path;
+            const maxAttempts = CONFIG.gallerySize;
+
+            for(let i = 1; i <= maxAttempts; i++) {
+                const image = {};
+
+                const path = `images/${folder}/${i}.jpg`;
+                const webpPath = `images/${folder}/${i}.webp`;
+
+                image.img = path;
+                image.webp = webpPath;
+
+                images.push(image);
             }
 
-            tryNext();
+            resolve(images);
         });
     }
 
@@ -502,7 +493,7 @@
                 `DTSTART:${startDate}`, 
                 `DTEND:${endDate}`, 
                 `SUMMARY:${CONFIG.groom.name} ♥ ${CONFIG.bride.name} 결혼식`, 
-`LOCATION:${CONFIG.wedding.venue} ${CONFIG.wedding.address}`,
+                `LOCATION:${CONFIG.wedding.venue} ${CONFIG.wedding.address}`,
                 'DESCRIPTION:결혼식에 초대합니다.',
                 'END:VEVENT',
                 'END:VCALENDAR'
@@ -542,7 +533,11 @@
             const div = document.createElement('div');
             div.className = 'gallery__item animate-item';
             div.setAttribute('data-animate', 'scale-in');
-            div.innerHTML = `<img src="${src}" alt="갤러리 사진 ${i + 1}" loading="eager">`;
+            div.innerHTML = `
+                <picture>
+                    <source srcset="${src.webp}" type="image/webp">
+                    <img src="${src.img}" alt="갤러리 사진 ${i + 1}" loading="lazy">
+                </picture>`;
             div.addEventListener('click', () => openPhotoModal(galleryImages, i));
             grid.appendChild(div);
         });
@@ -574,7 +569,7 @@
 
     function showModalImage() {
         const img = $('#modalImg');
-        img.src = modalImages[modalIndex];
+        img.src = modalImages[modalIndex].img;
         $('#modalCounter').textContent = `${modalIndex + 1} / ${modalImages.length}`;
 
         $('#modalPrev').style.display = modalIndex > 0 ? '' : 'none';

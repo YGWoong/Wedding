@@ -80,5 +80,8 @@ const CONFIG = {
   meta: {
     title: "건웅 ♥ 다혜 결혼합니다",
     description: "2026년 9월 12일, 소중한 분들을 초대합니다."
-  }
+  },
+
+  // ── 갤러리 이미지 사이즈 ──
+  gallerySize: 15
 };
