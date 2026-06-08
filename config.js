@@ -83,5 +83,5 @@ const CONFIG = {
   },
 
   // ── 갤러리 이미지 사이즈 ──
-  gallerySize: 16
+  gallerySize: 15
 };
