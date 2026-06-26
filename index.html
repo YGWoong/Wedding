@@ -167,14 +167,29 @@
         <h2 class="section__title animate-item" data-animate="fade-up">오시는 길</h2>
         <div class="location__info animate-item" data-animate="fade-up">
           <p class="location__venue" id="locationVenue"></p>
-          <p class="location__hall" id="locationHall"></p>
-          <p class="location__address" id="locationAddress"></p>
-          <p class="location__tel" id="locationTel"></p>
+          <p class="location__hall text__bold" id="locationHall"></p>
+          <div class="location__area">
+            <button type="button" class="btn location__copy__nontext btn--text animate-item" data-animate="fade-up" id="copyAddressBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+            <p class="location__address text__bold" id="locationAddress">
+            </p>
+          </div>
+          <p class="location__tel text__bold" id="locationTel"></p>
         </div>
-        <button type="button" class="btn btn--text location__copy animate-item" data-animate="fade-up" id="copyAddressBtn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          주소 복사
-        </button>
+<!--        <button type="button" class="btn btn&#45;&#45;text location__copy animate-item" data-animate="fade-up" id="copyAddressBtn">-->
+<!--          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>-->
+<!--          주소 복사-->
+<!--        </button>-->
+        <div class="notice__info animate-item" data-animate="fade-up">
+          <p class="notice__sub__header text__bold">[자동차]</p>
+          <p class="notice__body" id="noticeCar"></p>
+          <p class="notice__body" id="noticeParking"></p>
+          <p class="notice__sub__header text__bold">[지하철]</p>
+          <p class="notice__body" id="noticeSubway"></p>
+          <br>
+          <p class="notice__body" id="notice_1"></p>
+        </div>
         <div class="location__map animate-item" data-animate="scale-in">
           <div id="map" style="width:100%; max-width:600px; height:400px; border:1px solid #ccc;"></div>
         </div>

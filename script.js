@@ -734,6 +734,12 @@
             position: companyLocation,
             map: map
         });
+
+        const notice = CONFIG.notice;
+        $('#notice_1').textContent = notice.notice_1
+        $('#noticeParking').textContent = notice.parking
+        $('#noticeCar').textContent = notice.car
+        $('#noticeSubway').textContent = notice.subway
     }
 
     /* ═══════════════════════════════════════════
