@@ -34,6 +34,7 @@
 
   --font-serif: 'Noto Serif KR', 'Georgia', serif;
   --font-sans: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  --font-surrondAir: 'Cafe24SsurroundAir', sans-serif;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -71,7 +72,7 @@ html {
 }
 
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-surrondAir);
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.8;
@@ -203,7 +204,7 @@ input, textarea, select {
 }
 
 .curtain__subtitle {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   letter-spacing: 4px;
@@ -213,7 +214,7 @@ input, textarea, select {
 }
 
 .curtain__names {
-  font-family: var(--font-serif);
+  font-family: var(--font-surrondAir);
   font-size: 1.75rem;
   font-weight: 300;
   letter-spacing: 6px;
@@ -227,7 +228,7 @@ input, textarea, select {
   padding: 0.875rem 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: var(--color-white);
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 3px;
@@ -267,7 +268,7 @@ input, textarea, select {
   color: var(--color-white);
   padding: 0.75rem 1.5rem;
   border-radius: 100px;
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   z-index: 10000;
@@ -400,7 +401,7 @@ input, textarea, select {
   left: 50%;
   transform: translateX(-50%);
   color: rgba(255, 255, 255, 0.7);
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.875rem;
   letter-spacing: 2px;
 }
@@ -427,7 +428,7 @@ input, textarea, select {
 }
 
 .section__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-surrondAir);
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 4px;
@@ -516,7 +517,7 @@ input, textarea, select {
 }
 
 .hero__label {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   letter-spacing: 6px;
@@ -526,7 +527,7 @@ input, textarea, select {
 }
 
 .hero__names {
-  font-family: var(--font-serif);
+  font-family: var(--font-surrondAir);
   font-size: 2rem;
   font-weight: 200;
   letter-spacing: 8px;
@@ -542,7 +543,7 @@ input, textarea, select {
 
 .hero__date,
 .hero__venue {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   letter-spacing: 2px;
@@ -564,7 +565,7 @@ input, textarea, select {
 }
 
 .countdown__label {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.75rem;
   font-weight: 300;
   letter-spacing: 3px;
@@ -587,7 +588,7 @@ input, textarea, select {
 }
 
 .countdown__number {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 2rem;
   font-weight: 300;
   line-height: 1;
@@ -595,7 +596,7 @@ input, textarea, select {
 }
 
 .countdown__unit {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.625rem;
   font-weight: 300;
   letter-spacing: 2px;
@@ -604,7 +605,7 @@ input, textarea, select {
 }
 
 .countdown__sep {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 1.5rem;
   font-weight: 300;
   opacity: 0.4;
@@ -731,7 +732,7 @@ input, textarea, select {
 }
 
 .location__hall {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.875rem;
   font-weight: 300;
   color: var(--color-text-light);
@@ -739,7 +740,7 @@ input, textarea, select {
 }
 
 .location__address {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   color: var(--color-text-muted);
@@ -747,7 +748,7 @@ input, textarea, select {
 }
 
 .location__tel {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   color: var(--color-text-muted);
@@ -794,7 +795,7 @@ input, textarea, select {
 }
 
 .calendar__header {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 1.125rem;
   font-weight: 400;
   letter-spacing: 2px;
@@ -810,7 +811,7 @@ input, textarea, select {
 }
 
 .calendar__weekday {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.6875rem;
   font-weight: 400;
   color: var(--color-text-muted);
@@ -835,7 +836,7 @@ input, textarea, select {
 .calendar__day {
   text-align: center;
   padding: 0.5rem 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   color: var(--color-text-light);
@@ -879,7 +880,7 @@ input, textarea, select {
 }
 
 .account__desc {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.875rem;
   font-weight: 300;
   color: var(--color-text-light);
@@ -902,7 +903,7 @@ input, textarea, select {
   justify-content: space-between;
   width: 100%;
   padding: 1rem 1.25rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -963,7 +964,7 @@ input, textarea, select {
 }
 
 .account-item__role {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.6875rem;
   font-weight: 300;
   color: var(--color-text-muted);
@@ -971,7 +972,7 @@ input, textarea, select {
 }
 
 .account-item__detail {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   color: var(--color-text);
@@ -987,7 +988,7 @@ input, textarea, select {
   align-items: center;
   gap: 0.25rem;
   padding: 0.5rem 0.75rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.75rem;
   font-weight: 300;
   color: var(--color-forest);
@@ -1012,7 +1013,7 @@ input, textarea, select {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.8125rem;
   font-weight: 300;
   letter-spacing: 1px;
@@ -1090,7 +1091,7 @@ input, textarea, select {
 }
 
 .footer__text {
-  font-family: var(--font-sans);
+  font-family: var(--font-surrondAir);
   font-size: 0.75rem;
   font-weight: 300;
   color: var(--color-text-muted);
@@ -1280,4 +1281,15 @@ input, textarea, select {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* ═══════════════════════════════════════════
+   Fonts
+   ═══════════════════════════════════════════ */
+@font-face {
+  font-family: 'Cafe24SsurroundAir';
+  src: url('./font/Cafe24Ssurroundair.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
